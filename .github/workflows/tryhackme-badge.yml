@@ -1,18 +1,20 @@
-name: Update TryHackMe Badge
+name: TryHackMe Update Badge
 
 on:
   schedule:
-    # Runs every day at midnight (UTC)
-    - cron: '0 0 * * *' 
-  # Manual trigger (optional)
+    # Make it run every 24 hours
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
-  update-badge:
+  tryhackme-badge-update:
+    name: Update this repo's TryHackMe badge with the latest TryHackMe image badge
     runs-on: ubuntu-latest
     steps:
-      - name: Update badge
-        uses: p4p1/tryhackme-badge-workflow@v2.0.0
+      - uses: actions/checkout@v2
+      - uses: p4p1/tryhackme-badge-workflow@main
         with:
-          THM_USERNAME: 'SudoSesh' # Replace with your TryHackMe username
+          # Replace with your TryHackMe username
+          username: "SudoSesh" 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
