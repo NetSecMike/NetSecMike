@@ -4,7 +4,6 @@
 [![TryHackMe Badge](https://github.com/NetSecMike/NetSecMike/actions/workflows/tryhackme-badge.yml/badge.svg)](https://tryhackme.com/p/SudoSesh)
 
 
-
 Experienced Security Analyst with a passion for threat intelligence, digital forensics, and malware analysis. Skilled in Python programming, Linux systems, and EDR investigations. Committed to continuous learning and advancing cybersecurity practices.
 
 ## Professional Summary
