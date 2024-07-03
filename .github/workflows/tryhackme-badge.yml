@@ -1,0 +1,18 @@
+name: Update TryHackMe Badge
+
+on:
+  schedule:
+    # Runs every day at midnight (UTC)
+    - cron: '0 0 * * *' 
+  # Manual trigger (optional)
+  workflow_dispatch:
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update badge
+        uses: p4p1/tryhackme-badge-workflow@v2.0.0
+        with:
+          THM_USERNAME: 'SudoSesh' # Replace with your TryHackMe username
+
