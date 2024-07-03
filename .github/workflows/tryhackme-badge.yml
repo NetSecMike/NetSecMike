@@ -10,11 +10,12 @@ jobs:
   tryhackme-badge-update:
     name: Update this repo's TryHackMe badge with the latest TryHackMe image badge
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: p4p1/tryhackme-badge-workflow@main
+      - uses: actions/checkout@v3 # Update to v3 for Node20 support
+
+      - name: Update TryHackMe Badge
+        uses: p4p1/tryhackme-badge-workflow@v2.0.1 # Updated version of this action
         with:
-          # Replace with your TryHackMe username
-          username: "SudoSesh" 
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          THM_USERNAME: "SudoSesh" # Replace with your TryHackMe username
 
